@@ -6,8 +6,8 @@ def isVowelLetters(user_text):
 
 
 def count_vowel_letter(user_text):
-    dict_user_text = {value: value.count(str(isVowelLetters(user_text))) % 2 for value in text.split()}
-    return len(set(value for key, value in dict_user_text.items())) == 1
+    dict_user_text = {value: value.count(str(isVowelLetters(user_text))) for value in text.split()}
+    return len(set(value for key, value in dict_user_text.items())) == 1 and len(dict_user_text) != 1
 
 
 text = input().lower()
